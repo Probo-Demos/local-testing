@@ -1,0 +1,5 @@
+steps:
+  - name: Check wp-cli.
+    plugin: Script
+    script:
+      - wp --info --allow-root
