@@ -3,3 +3,4 @@ steps:
     plugin: Script
     script:
       - wp --info --allow-root
+      - drush --version
