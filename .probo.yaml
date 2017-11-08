@@ -1,5 +1,5 @@
 steps:
-  - name: Check wp-cli version.
+  - name: Check wp-cli version...
     plugin: Script
     script:
       - wp --info --allow-root
