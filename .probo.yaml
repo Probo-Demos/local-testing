@@ -7,7 +7,7 @@ steps:
       - mysql --version
       - apache2 -version
       - php -v
-  - name: Checking installed software and tools.
+  - name: Checking installed software and tools..
     plugin: Script
     script:
       - node -v
