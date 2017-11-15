@@ -11,3 +11,4 @@ steps:
     script:
       - node -v
       - composer --version
+      - wp --info --allow-root 
