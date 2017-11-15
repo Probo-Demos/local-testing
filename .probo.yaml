@@ -11,4 +11,9 @@ steps:
     script:
       - node -v
       - composer --version
-      - wp --info --allow-root 
+      - wp --info --allow-root
+  - name: Check working directory and list contents.
+    plugin: Script
+    script:
+      - pwd
+      - ls -la
