@@ -12,7 +12,7 @@ steps:
     script:
       - pwd
       - ls -la -h
-  - name: Checking versions of software installed.
+  - name: Check wp-cli version.
     plugin: Script
     script:
       - wp --info --allow-root
