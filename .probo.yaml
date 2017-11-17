@@ -1,5 +1,5 @@
 steps:
-  - name: Checking ubuntu, apache, mysql, and php version..
+  - name: Checking ubuntu, apache, mysql, and php version.
     plugin: Script
     script:
       - lsb_release -a
