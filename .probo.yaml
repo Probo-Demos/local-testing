@@ -7,7 +7,7 @@ steps:
       - mysql --version
       - apache2 -version
       - php -v
-  - name: Check working directory and list contents..
+  - name: Check working directory and list contents.
     plugin: Script
     script:
       - pwd
