@@ -1,14 +1,9 @@
 image: proboci/ubuntu-16.04-lamp:php7.2-nightly
 steps:
-  - name: Checking ubuntu, apache, mysql, and php version..
-    plugin: Script
-    script:
-      - lsb_release -a
-      - mysql --version
-      - apache2 -version
-      - php -v
-  - name: Check working directory and list contents.
-    plugin: Script
-    script:
-      - pwd
-      - ls -la -h
+  - name: Probo site setup
+    plugin: Drupal
+    database: drupal_github.sql.gz
+    databaseGzipped: true
+    databaseUpdates: true
+    revertFeatures: true
+    clearCaches: true
