@@ -12,7 +12,3 @@ steps:
     script:
       - pwd
       - ls -la -h
-  - name: Check wp-cli version.
-    plugin: Script
-    script:
-      - wp --info --allow-root
