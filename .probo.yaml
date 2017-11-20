@@ -1,9 +1,10 @@
-image: proboci/ubuntu-16.04-lamp:php7.2-nightly
+image: proboci/ubuntu-14.04-lamp:php5.6-nightly
+assets:
+  - d8testsite.sql.gz
 steps:
-  - name: Provision Drupal
+  - name: Probo site setup
     plugin: Drupal
-    runInstall: standard
-    settingsRequireFile: 'site-settings.php'
-    settingsAppend: |
-      $bar = 'baz';
-      $foo = 'stuff';
+    database: d8testsite.sql.gz
+    databaseGzipped: true
+  - name: Generate login link
+    command: "drush --root='/var/www/html/' uli"
