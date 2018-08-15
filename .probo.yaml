@@ -1,5 +1,4 @@
 steps:
-  - name: Check wp-cli version.
-    plugin: Script
-    script:
-      - wp --info --allow-root
+  - name: Test Connection
+    plugin: Shell
+    command: 'echo "Hello World!"'
