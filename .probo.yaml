@@ -2,5 +2,6 @@ image: proboci/ubuntu-14.04-lamp:php-5.6-beta
 steps:
   - name: Check wp-cli version.
     plugin: Script
-    script:
-      - wp --info --allow-root
+    script: |
+      wp --info --allow-root
+      ls -la /var/log
