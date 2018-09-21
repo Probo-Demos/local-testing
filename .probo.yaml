@@ -5,3 +5,4 @@ steps:
     script: |
       wp --info --allow-root
       ls -la /var/log
+      php -v
