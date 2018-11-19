@@ -1,5 +1,5 @@
+image: proboci/ubuntu-14.04-lamp:php-5.5
 steps:
-  - name: Check wp-cli version.
-    plugin: Script
-    script:
-      - wp --info --allow-root
+  - name: Test Connection
+    plugin: Shell
+    command: 'echo "Hello World!"'
