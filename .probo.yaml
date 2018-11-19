@@ -1,5 +1,13 @@
+image: proboci/ubuntu-16.04-lamp:php-7.2
 steps:
   - name: Check wp-cli version.
     plugin: Script
-    script:
-      - wp --info --allow-root
+    script: |
+      wp --info --allow-root
+      ls -la /var/log
+      php -v
+  - name: Create index.html
+    plugin: Script
+    script: |
+      echo '<?php phpinfo(); ?>' >> /src/index.php
+      ln -s /src /var/www/html
