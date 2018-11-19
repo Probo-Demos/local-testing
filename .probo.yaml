@@ -6,8 +6,3 @@ steps:
       wp --info --allow-root
       ls -la /var/log
       php -v
-  - name: Create index.html
-    plugin: Script
-    script: |
-      echo 'testing this' >> /src/index.html
-      ln -s /src /var/www/html
