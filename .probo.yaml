@@ -1,4 +1,4 @@
-image: proboci/ubuntu-14.04-lamp:php-5.6-beta
+image: proboci/ubuntu-14.04-lamp:php-5.6
 steps:
   - name: Check wp-cli version.
     plugin: Script
@@ -6,3 +6,8 @@ steps:
       wp --info --allow-root
       ls -la /var/log
       php -v
+  - name: Create index.html
+    plugin: Script
+    script: |
+      echo 'testing this' >> /src/index.html
+      ln -s /src /var/www/html
