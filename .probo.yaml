@@ -3,8 +3,7 @@ steps:
     plugin: Script
     script:
       - echo "Hello, world!"
-  - name: Create index.html
+  - name: Loop
     plugin: Script
     script:
-      - touch index.html
-      - echo "<h1>Hello, World!</h1>" > index.html
+      - for i in {1...5} ; do echo "Looping ... number $i" && sleep 5 ; done
