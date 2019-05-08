@@ -1,5 +1,9 @@
 steps:
-  - name: Check wp-cli version.
+  - name: Say hello
     plugin: Script
     script:
-      - wp --info --allow-root
+      - echo "Hello, world!"
+  - name: Loop
+    plugin: Script
+    script:
+      - for i in {1..5} ; do echo "Looping ... number $i" && sleep 5 ; done
