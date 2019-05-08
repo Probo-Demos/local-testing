@@ -1,5 +1,10 @@
 steps:
-  - name: Check wp-cli version.
+  - name: Say hello
     plugin: Script
     script:
-      - wp --info --allow-root
+      - echo "Hello, world!"
+  - name: Create index.html
+    plugin: Script
+    script:
+      - touch index.html
+      - echo "<h1>Hello, World!</h1>" > index.html
