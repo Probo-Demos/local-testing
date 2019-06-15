@@ -1,5 +1,5 @@
 steps:
-  - name: Check wp-cli version.
+  - name: ugh
     plugin: Script
     script:
-      - wp --info --allow-root
+      - echo "Hello, world!"'
