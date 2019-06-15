@@ -1,5 +1,4 @@
 steps:
   - name: ugh
-    plugin: Script
-    script:
-      - echo "Hello, world!"'
+    plugin: Shell
+    command: 'echo "Hello, cruel world!"'
